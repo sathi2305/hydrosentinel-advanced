@@ -1,0 +1,17 @@
+
+# koyeb.yaml - Permanent free backend
+version: v1
+app:
+  name: hydrosentinel-advanced
+  services:
+    - name: api
+      type: web
+      instance_type: free
+      regions: [fra]
+      ports:
+        - port: 8000
+          protocol: http
+      routes:
+        - path: /
+      docker:
+        dockerfile: Dockerfile
