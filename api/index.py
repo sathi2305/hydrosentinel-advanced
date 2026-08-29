@@ -3,12 +3,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "HydroSentinel Advanced is LIVE!"
+    return "HydroSentinel Advanced is LIVE! Fixed!"
 
-@app.route('/dashboard')
-def dashboard():
-    return "Dashboard Working!"
-
-@app.route('/<path:path>')
-def all_routes(path):
-    return f"Route {path} is working!"
+@app.route('/api/test')
+def test():
+    return "API Working!"
